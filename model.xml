@@ -1,0 +1,17 @@
+<mujoco>
+<worldbody>
+    <light name="top" pos="0 0 1"/>
+    <body name="box" pos="0 0 0.2" euler="0 0 -30">
+        <joint name="slide_x" type="slide" axis="1 0 0" pos="0 0 0"/>
+        <joint name="slide_y" type="slide" axis="0 1 0" pos="0 0 0"/>
+        <geom name="red_box" type="sphere" size=".2" rgba="1 0 0 1"/>
+    </body>
+    <body name="floor" pos="0 0 0">
+        <geom name="floor" type="plane" size="100 100 .1" rgba="0 1 0 1"/>
+    </body>
+</worldbody>
+<actuator>
+    <motor gear="1" joint="slide_x" name="slide_x"/>
+    <motor gear="1" joint="slide_y" name="slide_y"/>
+</actuator>
+</mujoco>
