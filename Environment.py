@@ -21,6 +21,7 @@ class Env(eqx.Module):
         if options is not None:
             m.opt.timestep = options["timestep"]
             m.opt.integrator = options["integrator"]
+            m.opt.gravity = options["gravity"]
         self.m = m
         self.mx = mjx.put_model(m)
 
